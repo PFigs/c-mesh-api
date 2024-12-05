@@ -15,6 +15,11 @@ int Test_runAll();
 int Test_scratchpad();
 
 /**
+ * \brief   Test CDD API related functionality
+ */
+int Test_configuration_data_distribution_api();
+
+/**
  * \brief   Returns number of passed test cases
  */
 int GetPassedTestCount();

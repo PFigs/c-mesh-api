@@ -1176,6 +1176,39 @@ app_res_e WPC_send_data(const uint8_t * bytes,
     return WPC_send_data_with_options(&message);
 }
 
+app_res_e WPC_set_config_data_item(const uint16_t endpoint,
+                                   const uint8_t *const payload,
+                                   const uint8_t size)
+{
+  // TODO
+  return APP_RES_NOT_IMPLEMENTED;
+}
+
+app_res_e WPC_get_config_data_item(const uint16_t endpoint,
+                                   uint8_t *const payload,
+                                   uint8_t *const size)
+{
+  // TODO
+  return APP_RES_NOT_IMPLEMENTED;
+}
+
+app_res_e WPC_get_config_data_item_list(uint8_t *const max_optional_item_payload_size,
+                                        uint8_t *const max_num_of_optional_items,
+                                        app_config_data_item_header *const items,
+                                        uint8_t *const number_of_items)
+{
+    // TODO
+    return APP_RES_NOT_IMPLEMENTED;
+}
+
+app_res_e WPC_get_full_config_data(uint8_t *const data,
+                                   const size_t data_size,
+                                   size_t *const size_read)
+{
+    // TODO
+    return APP_RES_NOT_IMPLEMENTED;
+}
+
 #ifdef REGISTER_DATA_PER_ENDPOINT
 app_res_e WPC_register_for_data(uint8_t dst_ep, onDataReceived_cb_f onDataReceived)
 {
@@ -1226,4 +1259,14 @@ app_res_e WPC_register_for_stack_status(onStackStatusReceived_cb_f onStackStatus
 app_res_e WPC_unregister_from_stack_status()
 {
     return msap_unregister_from_stack_status() ? APP_RES_OK : APP_RES_INVALID_VALUE;
+}
+
+app_res_e WPC_register_for_config_data_item(onConfigDataItemReceived_cb_f onConfigDataItemReceived)
+{
+    return msap_register_for_config_data_item(onConfigDataItemReceived) ? APP_RES_OK : APP_RES_INVALID_VALUE;
+}
+
+app_res_e WPC_unregister_from_config_data_item()
+{
+    return msap_unregister_from_config_data_item() ? APP_RES_OK : APP_RES_INVALID_VALUE;
 }

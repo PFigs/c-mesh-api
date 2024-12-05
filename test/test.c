@@ -961,3 +961,20 @@ int Test_scratchpad()
 
     return 0;
 }
+
+int Test_configuration_data_distribution_api()
+{
+    // TODO draft
+    // [setup]: Remove all optional items.
+    // - Set one optional item. Set and get, also verify rx indication. Then remove item and verify using get list.
+    // - Set too many optional items, should fail with correct error. Then remove all items.
+    // - Set legacy item and verify using legacy interface (such as appconfig).
+    // - Get non existing endpoint, should fail.
+    // - Set item with too large payload, should fail.
+    // - Set optional item, then set again with different payload size (replace). Get to verify, then remove.
+    // - Make role non-sink, setting should fail.
+    // - Make role non-sink, getting should work.
+
+    return 0;
+}
+
