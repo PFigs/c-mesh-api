@@ -985,26 +985,6 @@ app_res_e WPC_get_config_data_item_list(uint8_t *const max_optional_item_payload
                                         uint8_t *const number_of_items);
 
 /**
- * \brief   Get the whole configuration data content
- * \param   data
- *          Pointer to read the configuration data to
- * \param   data_size
- *          Maxumum number of bytes to write to data (for example the size of
- *          the buffer allocated for data)
- * \param   size_read
- *          Size of the configuration data that was written to data (bytes)
- * \return  Return code of the operation
- * \note    The data content is in TLV (tag-length-value) format. It is made up
- *          of the following structures:
- *            - endpoint (2 bytes)
- *            - payload size (1 byte)
- *            - payload (N bytes)
- */
-app_res_e WPC_get_full_config_data(uint8_t *const data,
-                                   const size_t data_size,
-                                   size_t *const size_read);
-
-/**
  * \brief   Callback definition to register for received data
  * \param   bytes
  *          Buffer of received data

@@ -1201,14 +1201,6 @@ app_res_e WPC_get_config_data_item_list(uint8_t *const max_optional_item_payload
     return APP_RES_NOT_IMPLEMENTED;
 }
 
-app_res_e WPC_get_full_config_data(uint8_t *const data,
-                                   const size_t data_size,
-                                   size_t *const size_read)
-{
-    // TODO
-    return APP_RES_NOT_IMPLEMENTED;
-}
-
 #ifdef REGISTER_DATA_PER_ENDPOINT
 app_res_e WPC_register_for_data(uint8_t dst_ep, onDataReceived_cb_f onDataReceived)
 {
